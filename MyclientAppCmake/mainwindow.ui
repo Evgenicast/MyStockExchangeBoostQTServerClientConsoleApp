@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>966</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(118, 118, 118);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="3" column="3">
+     <widget class="QPushButton" name="btn_balance">
+      <property name="styleSheet">
+       <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Balance Request</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="5">
+     <widget class="QPushButton" name="btn_connect">
+      <property name="styleSheet">
+       <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Connect</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="5">
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(131, 95, 95);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="btn_hello">
+      <property name="styleSheet">
+       <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Hello Request</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="btn_buy">
+      <property name="styleSheet">
+       <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Buy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="4">
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item row="5" column="4">
+     <widget class="QPushButton" name="btn_type">
+      <property name="styleSheet">
+       <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 117, 131);</string>
+      </property>
+      <property name="text">
+       <string>-&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="btn_sell">
+      <property name="styleSheet">
+       <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Sell</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="btn_exit">
+      <property name="styleSheet">
+       <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Exit Session</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>966</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

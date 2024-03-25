@@ -1,0 +1,24 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.26.4)
+
+PROJECT(MyServerCmake)
+set(BOOST_ROOT D:/Boost_1_83_0)
+
+set(Boost_NO_BOOST_CMAKE ON)
+set(Boost_USE_STATIC_LIBS        ON) # only find static libs
+set(Boost_USE_MULTITHREADED      ON)
+set(Boost_USE_STATIC_RUNTIME    OFF)
+
+#FIND_PACKAGE(Boost 1.83.0 COMPONENTS system REQUIRED)
+FIND_PACKAGE(Boost)
+IF (Boost_FOUND)
+    INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+    ADD_DEFINITIONS( "-DHAS_BOOST" )
+ENDIF()
+FIND_PACKAGE(Threads REQUIRED)
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+
+SET(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_LIBRARIES "-static-libgcc -static-libstdc++ -lwsock32 -lws2_32 ${CMAKE_CXX_STANDARD_LIBRARIES}")
+
+ADD_EXECUTABLE(Server Server.h Server.cpp main.cpp Common.hpp json.hpp)
+TARGET_LINK_LIBRARIES(Server PRIVATE Threads::Threads ${Boost_LIBRARIES})
